@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { getCabin, getCabins } from "@/app/_lib/data-service";
+import { getCabin, getCabins, getSettings } from "@/app/_lib/data-service";
 import { EyeSlashIcon, MapPinIcon, UsersIcon } from "@heroicons/react/24/solid";
+import Reservation from "@/app/_components/Reservation";
 
 // export const metadata = {
 //   title: "Cabin",
@@ -81,12 +82,12 @@ export default async function Page({ params }) {
                     </ul>
                 </div>
             </div>
-
-            <div>
+            <Reservation cabin={cabin}></Reservation>
+            {/* <div>
                 <h2 className="text-5xl font-semibold text-center">
                     Reserve today. Pay on arrival.
                 </h2>
-            </div>
+            </div> */}
         </div>
     );
 }
